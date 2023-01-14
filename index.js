@@ -6,7 +6,7 @@ const repo = "https://github.com/Abhay2133/apps" || process.env.repo
 const dir = repo.split("/")[repo.split("/").length -1]
 const clone = `rm ${dir} -rfv ; rm src -rf; git clone ${repo}`
 const mv = `mv ${dir}/src ../src` || process.env.mv;
-const start = "./src/app.js"  || process.env.start
+const start = "./src/bin/index"  || process.env.start
 
 console.time("clone");
 execSync(clone); 
